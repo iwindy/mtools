@@ -2,6 +2,7 @@
   "name": "mtools",
   "version": "0.1.0",
   "private": true,
+  "main": "background.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -14,13 +15,15 @@
     "core-js": "^3.6.5",
     "electron": "^12.0.14",
     "iohook": "^0.9.3",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
@@ -33,17 +36,13 @@
     "lint-staged": "^9.5.0",
     "node-abi": "^2.30.0",
     "prettier": "^2.2.1",
+    "sass": "^1.35.2",
+    "sass-loader": "^10.2.0",
     "typescript": "~4.1.5",
     "vue-cli-plugin-electron-builder": "^2.1.1"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
   },
   "iohook": {
     "targets": [
@@ -56,6 +55,12 @@
     "arches": [
       "x64",
       "ia32"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
     ]
   }
 }
